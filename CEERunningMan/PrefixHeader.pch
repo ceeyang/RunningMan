@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  CEERunningMan
+//
+//  Created by 纵使寂寞开成海 on 15/12/31.
+//  Copyright © 2015年 Cee. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/** XMPP 工具类中需要的相关宏 */
+#import <UIKit/UIKit.h>
+#define     CEEXMPPDOMAIN           @"tarena.com"
+#define     CEEXMPPHOSTNAME      @"124.207.192.18"
+#define     CEEXMPPPOST                 5222
+#endif /* PrefixHeader_pch */
+
+/** 当程序属于调试阶段, MYLog 替换到成 NSLog(...) */
+/** 当程序处于上线阶段, MYLog 不做任何输出 */
+#ifdef DEBUG
+    #define     MYLog(...)      NSLog(__VA_ARGS__)
+#else
+    #define     MYLog(...)
+#endif
+
+
+#define IP @"124.207.192.18"
