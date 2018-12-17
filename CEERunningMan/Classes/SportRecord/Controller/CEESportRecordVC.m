@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import "CEEUserInfo.h"
 #import "sportType.h"
+#import "CEESportRecord.h"
 
 
 @interface CEESportRecordVC()<UITableViewDelegate,UITableViewDataSource>
@@ -84,7 +85,7 @@
     CEESportRecordCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sportCell" forIndexPath:indexPath];
     CEESportRecord *rec = self.sportDatas[indexPath.row];
     
-    [cell setSportData:rec];
+    // [cell setSportData:rec];
     
     return cell;
 }
